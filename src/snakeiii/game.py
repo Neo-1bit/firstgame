@@ -13,8 +13,8 @@ GRID_HEIGHT = 18
 HUD_HEIGHT = 72
 WINDOW_WIDTH = GRID_WIDTH * CELL_SIZE
 WINDOW_HEIGHT = GRID_HEIGHT * CELL_SIZE + HUD_HEIGHT
-BASE_FPS = 11
-MAX_FPS = 16
+BASE_FPS = 9
+MAX_FPS = 15
 BACKGROUND = (23, 20, 18)
 PANEL = (42, 35, 28)
 GRID_LINE = (58, 48, 37)
@@ -116,7 +116,7 @@ def is_opposite(a: tuple[int, int], b: tuple[int, int]) -> bool:
 
 
 def current_speed(state: GameState) -> int:
-    return min(MAX_FPS, BASE_FPS + state.score // 4)
+    return min(MAX_FPS, BASE_FPS + state.score // 5)
 
 
 def update(state: GameState) -> GameState:
