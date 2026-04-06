@@ -6,17 +6,16 @@
 - Current focus is PoC v2 polish and usability work.
 
 ## In progress
-- [ ] Assemble review notes for the next internal playtest
-- [ ] Prepare a small changelog for review
+- [ ] Try a real packaged review build on the target platform
+- [ ] Decide whether visual effects polish is worth doing before release
 
 ## Ready next
 - [ ] Add optional audio feedback
-- [ ] Decide whether visual effects polish is worth doing before release
-- [ ] Try a real packaged review build on the target platform
 - [ ] Draft release notes for the next review drop
+- [ ] Prepare a broader release candidate build
+- [ ] Decide whether any final art pass is still worth the time
 
 ## Backlog
-- [ ] Decide on speed ramping for PoC v2 or later
 - [ ] Add sound effects and basic music
 - [ ] Add stronger steampunk visual polish
 - [ ] Package a cleaner downloadable build
@@ -45,6 +44,8 @@
 - [x] Review movement speed and pacing
 - [x] Add gentle score-based speed ramping
 - [x] Prepare a lightweight packaging path
+- [x] Assemble review notes for the next internal playtest
+- [x] Prepare a small changelog for review
 
 ## Priorities
 ### High
@@ -63,10 +64,10 @@
 - Extra visual flourishes
 
 ## Suggested next sprint
-- [ ] Review movement speed and pacing
-- [ ] Smoke test restart, pause, quit, and edge cases
-- [ ] Prepare a short release checklist
-- [ ] Decide whether speed ramping belongs before the next release
+- [ ] Try a packaged build on the main target platform
+- [ ] Collect playtest feedback on pacing and clarity
+- [ ] Decide whether sound or visual polish is the next best return
+- [ ] Prepare a broader review or release candidate build
 
 ## Notes
 - Keep tasks small and implementation-ready.

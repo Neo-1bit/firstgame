@@ -23,4 +23,4 @@
 ## Follow-up candidates
 - Create and test a real packaged review build on the target platform.
 - Add sound effects if presentation needs a stronger sense of feedback.
-- Draft short release notes for the next internal review build.
+- Use `docs/review_notes.md` and `docs/changelog.md` during the next internal review.
