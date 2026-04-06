@@ -3,13 +3,13 @@
 ## Current focus
 - Move from PoC review build to Beta readiness
 - Validate the packaged build on the main target machine
-- Confirm the new slower speed curve with testers
+- Start the small visual polish pass for issue #4
 
 ## Near-term follow-up
 1. Validate the packaged build on the main target machine
 2. Review new GitHub issues the same day they arrive
-3. Confirm whether the latest speed tuning resolves issue #7
-4. Decide whether issue #4 belongs in Beta scope or should wait
+3. Confirm whether the latest speed tuning is accepted by testers
+4. Complete the small Beta visual polish pass for issue #4
 5. Prepare release notes and a Beta release candidate if bug reports stay light
 
 ## Notes

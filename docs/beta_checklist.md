@@ -29,7 +29,8 @@ A build is Beta-ready when all of the following are true:
 
 ## Current likely blockers
 - Packaged Linux build still needs real target-machine smoke testing
-- Issue #7 speed feedback may still need one more confirmation pass after the latest tuning
+- The latest slower speed curve still needs final tester confirmation
+- Issue #4 remains the only open Beta-scope GitHub issue
 
 ## Scope decision notes
 - Audio is optional for Beta, not a Beta blocker.

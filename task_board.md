@@ -7,11 +7,11 @@
 
 ## In progress
 - [ ] Smoke test the packaged Linux build on the main target machine
-- [ ] Validate the new slower speed curve with testers
+- [ ] Start the small Beta visual polish pass for issue #4
 
 ## Ready next
 - [ ] Triage and fix any new tester-reported bugs
-- [ ] Decide whether issue #4 should be part of the Beta scope or deferred
+- [ ] Confirm the latest speed tuning is accepted by testers
 - [ ] Prepare release notes for the Beta candidate
 - [ ] Prepare a Beta release candidate build
 
@@ -67,9 +67,9 @@
 
 ## Suggested next sprint
 - [ ] Validate the packaged build on the main target machine
+- [ ] Execute the small visual polish pass for issue #4
 - [ ] Confirm the new slower speed curve with testers
 - [ ] Triage every new tester issue within the same day
-- [ ] Decide on the next action for issue #4 (small visual pass or defer)
 - [ ] Prepare release notes and a Beta release candidate if no major bugs remain
 
 ## Notes
