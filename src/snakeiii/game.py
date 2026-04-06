@@ -18,10 +18,14 @@ MAX_FPS = 15
 BACKGROUND = (23, 20, 18)
 PANEL = (42, 35, 28)
 GRID_LINE = (58, 48, 37)
+BOARD_SHADOW = (14, 12, 10)
+BOARD_FRAME = (96, 72, 44)
+BOARD_INNER = (33, 28, 23)
 BRASS = (181, 136, 71)
 COPPER = (184, 92, 56)
 STEAM = (214, 205, 184)
 ACCENT = (116, 171, 120)
+ACCENT_GLOW = (154, 204, 156)
 TEXT = (236, 229, 214)
 GAME_OVER = (160, 60, 50)
 HUD_MUTED = (170, 157, 138)
@@ -157,6 +161,16 @@ def update(state: GameState) -> GameState:
     return state
 
 
+def draw_board_frame(screen: pygame.Surface) -> None:
+    shadow = pygame.Rect(10, HUD_HEIGHT + 10, WINDOW_WIDTH - 20, WINDOW_HEIGHT - HUD_HEIGHT - 20)
+    frame = pygame.Rect(6, HUD_HEIGHT + 6, WINDOW_WIDTH - 12, WINDOW_HEIGHT - HUD_HEIGHT - 12)
+    inner = pygame.Rect(12, HUD_HEIGHT + 12, WINDOW_WIDTH - 24, WINDOW_HEIGHT - HUD_HEIGHT - 24)
+    pygame.draw.rect(screen, BOARD_SHADOW, shadow, border_radius=18)
+    pygame.draw.rect(screen, BOARD_FRAME, frame, border_radius=18)
+    pygame.draw.rect(screen, BOARD_INNER, inner, border_radius=14)
+
+
+
 def draw_grid(screen: pygame.Surface) -> None:
     for x in range(GRID_WIDTH):
         for y in range(GRID_HEIGHT):
@@ -176,6 +190,9 @@ def draw_snake(screen: pygame.Surface, snake: list[tuple[int, int]]) -> None:
             CELL_SIZE - inset * 2,
         )
         pygame.draw.rect(screen, color, rect, border_radius=6)
+        highlight = rect.inflate(-8, -8)
+        if highlight.width > 0 and highlight.height > 0:
+            pygame.draw.rect(screen, ACCENT_GLOW if index else STEAM, highlight, 1, border_radius=5)
         if index == 0:
             eye_y = rect.y + rect.height // 3
             pygame.draw.circle(screen, BACKGROUND, (rect.x + rect.width // 3, eye_y), 2)
@@ -186,6 +203,7 @@ def draw_food(screen: pygame.Surface, food: tuple[int, int]) -> None:
     x, y = food
     center_x = x * CELL_SIZE + CELL_SIZE // 2
     center_y = HUD_HEIGHT + y * CELL_SIZE + CELL_SIZE // 2
+    pygame.draw.circle(screen, ACCENT_GLOW, (center_x, center_y), CELL_SIZE // 2 - 2, 1)
     pygame.draw.circle(screen, COPPER, (center_x, center_y), CELL_SIZE // 3)
     pygame.draw.circle(screen, STEAM, (center_x - 3, center_y - 3), CELL_SIZE // 10)
     pygame.draw.line(screen, ACCENT, (center_x, center_y - 9), (center_x + 4, center_y - 14), 2)
@@ -318,6 +336,7 @@ def main() -> int:
 
         screen.fill(BACKGROUND)
         draw_hud(screen, hud_font, hud_small_font, state)
+        draw_board_frame(screen)
         draw_grid(screen)
         draw_food(screen, state.food)
         draw_snake(screen, state.snake)
