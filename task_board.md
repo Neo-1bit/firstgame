@@ -6,14 +6,14 @@
 - Current focus is PoC v2 polish and usability work.
 
 ## In progress
-- [ ] Prepare a lightweight packaging path
 - [ ] Assemble review notes for the next internal playtest
+- [ ] Prepare a small changelog for review
 
 ## Ready next
 - [ ] Add optional audio feedback
-- [ ] Prepare a small changelog for review
 - [ ] Decide whether visual effects polish is worth doing before release
-- [ ] Explore simple packaging for Linux and Windows
+- [ ] Try a real packaged review build on the target platform
+- [ ] Draft release notes for the next review drop
 
 ## Backlog
 - [ ] Decide on speed ramping for PoC v2 or later
@@ -44,6 +44,7 @@
 - [x] Improve restart flow and edge-case handling
 - [x] Review movement speed and pacing
 - [x] Add gentle score-based speed ramping
+- [x] Prepare a lightweight packaging path
 
 ## Priorities
 ### High

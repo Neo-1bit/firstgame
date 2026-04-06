@@ -13,3 +13,4 @@ python -m src.main
 - Use Python 3.12 or another recent Python 3 version.
 - The project currently depends only on Pygame.
 - Local save data is written to `.local/high_score.json`.
+- For packaging, see `docs/packaging.md`.

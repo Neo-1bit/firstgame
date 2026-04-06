@@ -21,6 +21,6 @@
 - No open blocking UX gaps remain in the current core loop.
 
 ## Follow-up candidates
-- Review pacing and decide whether speed ramping is needed before release.
-- Add a lightweight packaging path for Linux and Windows.
+- Create and test a real packaged review build on the target platform.
 - Add sound effects if presentation needs a stronger sense of feedback.
+- Draft short release notes for the next internal review build.
