@@ -18,7 +18,7 @@
 - Project management: Markdown planning files in the repo.
 - Art tools: Lightweight pixel or illustration tools, depending on asset style.
 - Audio tools: Simple royalty-free sourcing or basic editing tools.
-- Build tools: Python virtual environment, pip, and possible later packaging with PyInstaller.
+- Build tools: Python virtual environment, pip, and a lightweight PyInstaller packaging path for review builds.
 - Testing tools: Manual playtesting first, optional pytest for logic modules later.
 
 ## Repository standards
@@ -29,9 +29,9 @@
 
 ## Architecture notes
 - Project structure: `src/` for code, `assets/` for media, `docs/` for supporting documentation.
-- Main modules: Game loop, input, board state, snake entity, pickups, scoring, UI.
+- Main modules: Entry point, game loop, input, board state, snake movement, pickups, scoring, UI overlays, and local save handling.
 - Data flow: Main loop updates input, updates game state, then renders frame.
-- State management: Simple state machine for menu, playing, paused, and game over states.
+- State management: Simple in-code state flow for title, playing, paused, and game over states.
 - Asset pipeline: Keep source assets organized and use optimized runtime assets as needed.
 
 ## Platforms
@@ -54,8 +54,9 @@
 
 ## Open decisions
 - Decision 1: Exact Python version to standardize for the team.
-- Decision 2: Whether to include packaged builds in the first public release.
-- Decision 3: Whether high score storage belongs in MVP or first post-MVP update.
+- Decision 2: Whether to include packaged builds directly in the next broader tester release.
+- Decision 3: Whether to add audio before the next wider release.
 
 ## Change log
 - 2026-04-06: Initial Snake III technical stack draft created.
+- 2026-04-06: Updated after PoC v2 review push to reflect implemented UI flow, local saves, and packaging path.

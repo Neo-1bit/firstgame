@@ -9,7 +9,7 @@
 ## Player fantasy
 - What the player should feel: In control, relaxed, focused, and just a little proud when surviving tight turns.
 - What makes the experience satisfying: Clean movement, visible growth, rising tension, and the reward of beating a previous score.
-- Current PoC status: The basic feel works, but the front-end flow and long-term replay hooks still need improvement.
+- Current PoC status: The core loop now includes a title screen, pause state, persistent best score saving, HUD polish, and gentle speed ramping. The next feedback should focus on feel, presentation, and release value.
 - Why players will come back: Short sessions, easy restarts, mastery through repetition, persistent best score, and future room for modifiers or challenge modes.
 
 ## Core gameplay loop
@@ -26,7 +26,7 @@
 - Movement: Grid-based directional movement controlled by keyboard.
 - Interaction: Collect pickups, avoid obstacles, and navigate increasing space pressure.
 - Combat / challenge: No direct combat, challenge comes from positioning, speed, and self-management.
-- Progression: Score increases during a run, with future support for local high score tracking.
+- Progression: Score increases during a run, with local persistent high score tracking already implemented.
 - Rewards: Score growth, survival time, visual feedback, and completion satisfaction.
 
 ## Systems
@@ -34,7 +34,7 @@
 - Enemy / obstacle systems: Walls by default, optional future hazards.
 - Economy / resources: Score as the main tracked resource.
 - Level or world systems: Single contained arena for MVP, with room for alternate boards later.
-- Save / progression systems: PoC v1 keeps best score in-session only. PoC v2 should add safe local high score storage.
+- Save / progression systems: Local high score storage is implemented in `.local/high_score.json`. Future work could expand this into richer local stats or challenge tracking.
 
 ## Game modes
 - Main mode: Classic endless score attack.
@@ -50,7 +50,7 @@
 ## UX and controls
 - Input scheme: Arrow keys or WASD.
 - HUD / UI needs: Score display, high score area, title screen, pause state, and game over message.
-- Current PoC status: Gameplay HUD and game over state exist. Title and pause flow still need to be added.
+- Current PoC status: Gameplay HUD, title screen, pause flow, game over state, and restart loop all exist in the current build.
 - Accessibility considerations: High-contrast mode later, readable fonts, clear game state prompts, and simple controls.
 
 ## Art and audio notes
@@ -79,8 +79,10 @@
 - What the first playable must prove: That the controls feel good, the loop is fun, and the game is stable enough to build on.
 - PoC v1 result: Core loop validated, local run path documented, and release published.
 - PoC v2 goal: Make the experience feel like a small complete game rather than just a functional prototype.
+- Current review-build result: The project is now in a reviewer-friendly state with cleaner UX flow, packaged-build guidance, and smoke-tested core interactions.
 - How success will be measured: Quick local setup, smooth play, no major bugs in the core loop, and positive team reaction to the feel.
 
 ## Change log
 - 2026-04-06: Initial Snake III design draft created.
 - 2026-04-06: Updated after PoC v1 to clarify UX and replay priorities for PoC v2.
+- 2026-04-06: Updated after PoC v2 review push to reflect implemented systems and current review goals.

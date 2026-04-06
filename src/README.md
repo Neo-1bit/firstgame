@@ -1,10 +1,19 @@
 # Source Directory
 
-This folder will contain the Python source code for Snake III.
+This folder contains the current Python source code for Snake III.
 
-Suggested future structure:
+## Current structure
 - `main.py` - application entry point
-- `game/` - game loop and state management
-- `entities/` - snake, pickups, and related logic
-- `ui/` - menus, HUD, and screen states
-- `utils/` - helpers and configuration
+- `snakeiii/game.py` - main game loop, input handling, rendering, state flow, and save logic
+- `snakeiii/__init__.py` - package marker
+
+## Current implementation notes
+The current source includes:
+- title screen flow
+- active gameplay loop
+- pause and game-over states
+- persistent local high score saving
+- HUD and overlay presentation logic
+- gentle score-based speed ramping
+
+If the codebase grows, this folder can later split into dedicated gameplay, UI, and utility modules.

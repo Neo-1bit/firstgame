@@ -1,9 +1,9 @@
 # Task Board
 
 ## Current status
-- PoC v1 is playable and committed.
-- Core loop, score tracking, restart flow, game over state, and local run instructions exist.
-- Current focus is PoC v2 polish and usability work.
+- The current review build is pushed to GitHub.
+- Core loop, score tracking, restart flow, title screen, pause flow, local saves, and packaging guidance are all in place.
+- Current focus is tester feedback, packaged-build verification, and issue-driven follow-up.
 
 ## In progress
 - [ ] Smoke test the packaged Linux build on the main target machine
@@ -50,14 +50,14 @@
 
 ## Priorities
 ### High
-- Feel tuning and small UX polish
-- Start / pause / restart flow polish
-- Release-ready smoke testing
+- Smoke test the packaged Linux build on the main target machine
+- Triage tester feedback quickly
+- Fix any release-facing bugs found during review
 
 ### Medium
 - Sound effects
 - Better visual identity and decorative polish
-- Packaging for easier distribution
+- Cleaner packaging and release flow
 
 ### Low
 - Alternate board themes

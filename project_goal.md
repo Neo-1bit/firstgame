@@ -9,7 +9,7 @@
 ## Vision and success
 - Long term vision: Turn a simple snake game into a polished little arcade experience with charm, replayability, and room for future feature expansion.
 - What success looks like: Players can download and run the game easily, understand it immediately, and want to replay for a better score.
-- Current status: PoC v1 is shipped and proves the core gameplay loop. The next focus is usability, persistence, and visual identity.
+- Current status: PoC v2 review build is now pushed, with persistent highscores, title screen, pause support, HUD polish, speed ramping, packaging notes, and review docs in place.
 - Non-goals: Large open worlds, online multiplayer, complex economies, and heavy live-service features.
 
 ## Core gameplay or core experience
@@ -21,8 +21,8 @@
 ## Scope
 - Must have for v1: GUI for the game, a working Snake-like game, score display, restart flow, game over state, and basic visual polish.
 - Completed in PoC v1: Playable loop, score tracking, restart flow, game over state, local setup instructions, and initial steampunk presentation.
-- Next for PoC v2: Persistent high score saving, title screen, pause state, feel tuning, and stronger visual polish.
-- Nice to have: Sound effects, speed ramping, particle effects, alternate boards.
+- Completed in PoC v2 review build: Persistent high score saving, title screen, pause state, feel tuning, HUD and overlay polish, restart-flow cleanup, speed ramping, smoke-test docs, and packaging notes.
+- Nice to have: Sound effects, particle effects, alternate boards, and stronger visual polish.
 - Out of scope for now: Online multiplayer, account systems, in-game purchases, mobile launch, procedural campaigns.
 
 ## Platform and delivery
@@ -52,7 +52,7 @@
 ## Development plan
 - Milestones: Planning, PoC v1 release, PoC v2 polish pass, MVP candidate, release preparation.
 - First prototype goal: A playable snake game with movement, food spawning, growth, collision detection, and scoring.
-- Current milestone: PoC v2, focused on persistence, UX flow, visual polish, and release readiness.
+- Current milestone: Internal review and broader tester feedback after the PoC v2 push.
 - Risks: Scope creep, overdesign too early, inconsistent art direction, and underestimating polish work.
 - Dependencies: Python 3, Pygame, local development environment, and GitHub repo workflow.
 
@@ -75,3 +75,4 @@
 ## Change log
 - 2026-04-06: Initial draft created and aligned to Snake III.
 - 2026-04-06: Updated after PoC v1 release with clearer v2 priorities.
+- 2026-04-06: Updated after PoC v2 review push to reflect current shipped features and review readiness.

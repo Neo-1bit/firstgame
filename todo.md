@@ -1,13 +1,16 @@
 # TODO
 
-## PoC v2 priority queue
-1. Persistent local high score saving
-2. Title screen / start state
-3. Pause state
-4. Feel tuning and HUD polish
-5. Smoke testing and release cleanup
+## Current focus
+- Smoke test the packaged Linux build on the main target machine
+- Collect tester feedback from the newly pushed review build
+- Decide whether visual polish or audio is the next best improvement
+
+## Near-term follow-up
+1. Validate the packaged build on the main target machine
+2. Watch for tester issues and triage them quickly
+3. Decide whether to prepare a broader release candidate or do one more polish pass
 
 ## Notes
-- PoC v1 is already playable.
-- Keep v2 focused on usability, persistence, and presentation.
-- Avoid adding large new feature scope before the front-end flow feels complete.
+- The repo is pushed and ready for broader testing.
+- Avoid adding new feature scope until tester feedback lands.
+- Prefer issue-driven fixes and small polish updates from here.

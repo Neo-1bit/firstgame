@@ -9,10 +9,10 @@ A cosy steampunk snake game built in Python.
 The project starts with a clean, fun single-player snake game for Linux and Windows, then leaves room for later additions like power-ups, special boards, score challenges, and visual polish.
 
 ## Current goals
-- Build a playable snake game with a GUI
+- Keep the shipped review build stable and easy to test
+- Gather tester feedback and fix the highest-value issues
 - Keep the code simple and maintainable
-- Ship an MVP quickly
-- Create a good foundation for future features
+- Prepare for a broader release without unnecessary scope creep
 
 ## Project documents
 - `project_goal.md` - project vision, scope, and success criteria
@@ -20,10 +20,10 @@ The project starts with a clean, fun single-player snake game for Linux and Wind
 - `task_board.md` - current tasks, priorities, and progress tracking
 - `tech_stack.md` - technical choices, tools, and architecture notes
 
-## Planned structure
+## Repository structure
 - `src/` - game source code
 - `assets/` - images, sounds, fonts, and art source files
-- `docs/` - extra documentation, references, and planning notes
+- `docs/` - setup, packaging, review, and release documentation
 
 ## Getting started
 1. Review `project_goal.md`
@@ -65,4 +65,4 @@ For review guidance, see `docs/review_notes.md` and `docs/changelog.md`.
 A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
 ## Status
-Playable PoC v1 exists, and PoC v2 now includes local persistent high score saving, a proper title screen, pause support, an improved in-game presentation pass, and a documented smoke-tested core loop.
+The pushed review build includes persistent local high score saving, a proper title screen, pause support, HUD and overlay polish, gentle speed ramping, smoke-test docs, and packaging guidance. The current focus is tester feedback and issue-driven follow-up.
