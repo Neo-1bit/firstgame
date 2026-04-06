@@ -1,10 +1,10 @@
 # Project Goal
 
 ## Project overview
-- Project name:
-- One sentence summary:
-- Problem this project solves:
-- Target users:
+- Project name: Snake III
+- One sentence summary: Python game runing a venv envirioment
+- Problem this project solves: 
+- Target users: Casual gamers
 
 ## Vision and success
 - Long term vision:
@@ -18,21 +18,21 @@
 - Unique selling points:
 
 ## Scope
-- Must have for v1:
+- Must have for v1: GUI for the game, a working Snake like game.
 - Nice to have:
 - Out of scope for now:
 
 ## Platform and delivery
-- Target platform(s):
-- Input method(s):
-- Distribution plan:
+- Target platform(s): Python on Linux and Windows
+- Input method(s): Keyboard
+- Distribution plan: Github
 - Performance expectations:
 
 ## Art and audio direction
-- Visual style:
+- Visual style: Steampunk
 - Audio style:
-- Mood and tone:
-- Reference inspirations:
+- Mood and tone: cosy and friendly
+- Reference inspirations: 80's snake game
 
 ## Technical direction
 - Engine / framework:
