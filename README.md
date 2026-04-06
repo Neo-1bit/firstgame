@@ -51,8 +51,14 @@ For more setup notes, see `docs/setup.md`.
 - Best score is saved locally in `.local/high_score.json`
 - Save data is created automatically after setting a score
 
+## Controls
+- `Space` to start from the title screen
+- Arrow keys or `WASD` to move
+- `R` to restart
+- `Esc` to quit
+
 ## MVP target
 A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
 ## Status
-Playable PoC v1 exists, and local persistent high score saving is now supported.
+Playable PoC v1 exists, and PoC v2 now includes local persistent high score saving plus a proper title screen.
