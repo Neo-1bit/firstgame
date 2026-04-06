@@ -2,10 +2,10 @@
 
 This folder stores project assets for Snake III.
 
-Suggested content:
-- `images/` - sprites, icons, and textures
-- `audio/` - music and sound effects
-- `fonts/` - licensed font files
-- `references/` - visual inspiration and art direction material
+Potential asset categories:
+- images
+- audio
+- fonts
+- references
 
-Keep source assets organized and verify licensing before release.
+Keep assets organized and properly licensed.

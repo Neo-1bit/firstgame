@@ -1,15 +1,17 @@
 # Docs Directory
 
-This folder stores active supporting documentation for Snake III.
+This folder stores operational documentation for Snake III.
 
-## Current key docs
+## Key docs
 - `setup.md` - local development and run instructions
 - `packaging.md` - lightweight PyInstaller build path
 - `release_checklist.md` - smoke-test and release-readiness checklist
-- `review_notes.md` - Beta feedback prompts and tester guidance
 - `beta_checklist.md` - Beta acceptance bar and scope guardrails
-- `changelog.md` - current unreleased change summary
+- `review_notes.md` - tester prompts and Beta feedback guidance
+- `beta_release_notes.md` - notes for the current Beta candidate
+- `changelog.md` - current unreleased or in-progress change summary
 
-## Current purpose
-These docs now support an active Beta sprint, not just early planning.
-Use them to run, package, test, evaluate Beta readiness, and prepare the next tester-facing drop.
+## Structure rule
+- Keep user-facing overview and startup instructions in `README.md`
+- Keep merged project/design/technical summary in `PROJECT.md`
+- Keep active operational and release docs in `docs/`

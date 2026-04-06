@@ -2,36 +2,15 @@
 
 A cosy steampunk snake game built in Python.
 
-## Overview
-`Snake III` is a modern take on the classic snake formula. The goal is to build a small, polished desktop game with a friendly steampunk presentation, smooth controls, and enough charm to feel handcrafted rather than generic.
+## What it is
+`Snake III` is a small desktop arcade game with a warm steampunk presentation, smooth keyboard controls, and a focus on clean replayable score-chasing.
 
-## Vision
-The project starts with a clean, fun single-player snake game for Linux and Windows, then leaves room for later additions like power-ups, special boards, score challenges, and visual polish.
+## Current status
+- Current release: `v0.3.0-beta.1`
+- The project is in its Beta phase
+- Current focus: packaged-build confidence, issue-driven fixes, and final Beta candidate readiness
 
-## Current goals
-- Move the project from PoC review build to Beta readiness
-- Stabilize the packaged build and tester experience
-- Address the highest-value quality and polish gaps
-- Keep the code simple and maintainable while preparing the next release
-
-## Project documents
-- `project_goal.md` - project vision, scope, and success criteria
-- `game_design.md` - gameplay systems, mechanics, and player experience
-- `task_board.md` - current tasks, priorities, and progress tracking
-- `tech_stack.md` - technical choices, tools, and architecture notes
-
-## Repository structure
-- `src/` - game source code
-- `assets/` - images, sounds, fonts, and art source files
-- `docs/` - setup, packaging, review, and release documentation
-
-## Getting started
-1. Review `project_goal.md`
-2. Review `game_design.md`
-3. Check `tech_stack.md`
-4. Use `task_board.md` to drive work
-
-## Installation and run
+## Quick start
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -39,20 +18,11 @@ python -m pip install -r requirements.txt
 python -m src.main
 ```
 
-If `venv` is missing on Debian or Ubuntu, install it with:
+If `venv` is missing on Debian or Ubuntu:
 
 ```bash
 sudo apt install -y python3.12-venv python3-pip
 ```
-
-For more setup notes, see `docs/setup.md`.
-
-For packaging notes, see `docs/packaging.md`.
-For Beta guidance, see `docs/review_notes.md`, `docs/beta_checklist.md`, `docs/beta_release_notes.md`, and `docs/changelog.md`.
-
-## Save data
-- Best score is saved locally in `.local/high_score.json`
-- Save data is created automatically after setting a score
 
 ## Controls
 - `Space` to start from the title screen
@@ -61,8 +31,21 @@ For Beta guidance, see `docs/review_notes.md`, `docs/beta_checklist.md`, `docs/b
 - `R` to restart
 - `Esc` to quit
 
-## MVP target
-A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
+## Save data
+- Best score is saved locally in `.local/high_score.json`
+- Save data is created automatically after setting a score
 
-## Status
-`v0.2.0` is out as the PoC v2 review build, and the project is now in its Beta sprint. The current focus is stable tester experience, packaged-build confidence, selective polish, and issue-driven quality improvements toward the next release.
+## Main project docs
+- `PROJECT.md` - merged project overview, design, and technical summary
+- `task_board.md` - live work tracking and sprint status
+- `docs/setup.md` - development setup details
+- `docs/packaging.md` - packaging instructions
+- `docs/beta_checklist.md` - Beta acceptance bar
+- `docs/beta_release_notes.md` - current Beta candidate notes
+- `docs/changelog.md` - change summary
+
+## Packaging
+A lightweight PyInstaller packaging path is documented in `docs/packaging.md`.
+
+## Goal
+Ship a polished, approachable single-player snake game with a charming steampunk identity and a clean desktop-first experience.
