@@ -48,7 +48,7 @@ sudo apt install -y python3.12-venv python3-pip
 For more setup notes, see `docs/setup.md`.
 
 For packaging notes, see `docs/packaging.md`.
-For Beta guidance, see `docs/review_notes.md`, `docs/beta_checklist.md`, and `docs/changelog.md`.
+For Beta guidance, see `docs/review_notes.md`, `docs/beta_checklist.md`, `docs/beta_release_notes.md`, and `docs/changelog.md`.
 
 ## Save data
 - Best score is saved locally in `.local/high_score.json`

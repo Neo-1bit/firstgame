@@ -16,4 +16,4 @@
 
 ### Notes
 - `v0.2.0` has been released as the PoC v2 review build.
-- The next sprint is aimed at Beta readiness and release-candidate quality.
+- The project is now preparing a Beta candidate, pending packaged-build validation on the target machine.

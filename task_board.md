@@ -7,13 +7,12 @@
 
 ## In progress
 - [ ] Smoke test the packaged Linux build on the main target machine
-- [ ] Start the small Beta visual polish pass for issue #4
+- [ ] Prepare release notes for the Beta candidate
 
 ## Ready next
 - [ ] Triage and fix any new tester-reported bugs
-- [ ] Confirm the latest speed tuning is accepted by testers
-- [ ] Prepare release notes for the Beta candidate
 - [ ] Prepare a Beta release candidate build
+- [ ] Tag and publish the Beta release if packaged build validation passes
 
 ## Backlog
 - [ ] Add sound effects and basic music
@@ -48,6 +47,8 @@
 - [x] Prepare a small changelog for review
 - [x] Create a real packaged Linux review build
 - [x] Define the Beta release checklist and acceptance bar
+- [x] Validate the new slower speed curve with testers
+- [x] Start the small Beta visual polish pass for issue #4
 
 ## Priorities
 ### High
@@ -67,10 +68,9 @@
 
 ## Suggested next sprint
 - [ ] Validate the packaged build on the main target machine
-- [ ] Execute the small visual polish pass for issue #4
-- [ ] Confirm the new slower speed curve with testers
 - [ ] Triage every new tester issue within the same day
 - [ ] Prepare release notes and a Beta release candidate if no major bugs remain
+- [ ] Tag and publish the Beta release if packaged build validation passes
 
 ## Notes
 - Keep tasks small and implementation-ready.

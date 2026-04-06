@@ -5,11 +5,11 @@ A build is Beta-ready when all of the following are true:
 
 - [ ] The game launches reliably from source with `python -m src.main`
 - [ ] The packaged Linux build is smoke tested on the main target machine
-- [ ] Title, play, pause, restart, game over, and quit flows all behave cleanly
-- [ ] Best score saving works across relaunches
-- [ ] No open high-severity gameplay or startup bugs remain
-- [ ] Current speed curve is confirmed acceptable by testers, or intentionally deferred with documented rationale
-- [ ] Remaining open issues are either Beta-scoped, clearly deferred, or non-blocking polish
+- [x] Title, play, pause, restart, game over, and quit flows all behave cleanly
+- [x] Best score saving works across relaunches
+- [x] No open high-severity gameplay or startup bugs remain
+- [x] Current speed curve is confirmed acceptable by testers
+- [x] Remaining open issues are either Beta-scoped, clearly deferred, or non-blocking polish
 - [ ] Release notes are ready for the next Beta-tagged build
 
 ## Beta scope guidance
@@ -29,8 +29,7 @@ A build is Beta-ready when all of the following are true:
 
 ## Current likely blockers
 - Packaged Linux build still needs real target-machine smoke testing
-- The latest slower speed curve still needs final tester confirmation
-- Issue #4 remains the only open Beta-scope GitHub issue
+- Release notes still need to be prepared for the Beta-tagged build
 
 ## Scope decision notes
 - Audio is optional for Beta, not a Beta blocker.

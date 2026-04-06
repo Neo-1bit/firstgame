@@ -3,14 +3,13 @@
 ## Current focus
 - Move from PoC review build to Beta readiness
 - Validate the packaged build on the main target machine
-- Start the small visual polish pass for issue #4
+- Prepare the Beta candidate notes and release handoff
 
 ## Near-term follow-up
 1. Validate the packaged build on the main target machine
 2. Review new GitHub issues the same day they arrive
-3. Confirm whether the latest speed tuning is accepted by testers
-4. Complete the small Beta visual polish pass for issue #4
-5. Prepare release notes and a Beta release candidate if bug reports stay light
+3. Prepare release notes for the Beta candidate
+4. Prepare and tag the Beta candidate if packaged-build validation passes
 
 ## Notes
 - `v0.2.0` is released and becomes the Beta sprint baseline.
