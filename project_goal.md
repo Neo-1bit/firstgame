@@ -9,6 +9,7 @@
 ## Vision and success
 - Long term vision: Turn a simple snake game into a polished little arcade experience with charm, replayability, and room for future feature expansion.
 - What success looks like: Players can download and run the game easily, understand it immediately, and want to replay for a better score.
+- Current status: PoC v1 is shipped and proves the core gameplay loop. The next focus is usability, persistence, and visual identity.
 - Non-goals: Large open worlds, online multiplayer, complex economies, and heavy live-service features.
 
 ## Core gameplay or core experience
@@ -19,7 +20,9 @@
 
 ## Scope
 - Must have for v1: GUI for the game, a working Snake-like game, score display, restart flow, game over state, and basic visual polish.
-- Nice to have: Sound effects, title screen, pause menu, high score saving, speed ramping, particle effects.
+- Completed in PoC v1: Playable loop, score tracking, restart flow, game over state, local setup instructions, and initial steampunk presentation.
+- Next for PoC v2: Persistent high score saving, title screen, pause state, feel tuning, and stronger visual polish.
+- Nice to have: Sound effects, speed ramping, particle effects, alternate boards.
 - Out of scope for now: Online multiplayer, account systems, in-game purchases, mobile launch, procedural campaigns.
 
 ## Platform and delivery
@@ -47,8 +50,9 @@
 - Communication norms: Short updates, clear tasks, and written decisions inside the repo.
 
 ## Development plan
-- Milestones: Planning, first playable prototype, MVP polish pass, release preparation.
+- Milestones: Planning, PoC v1 release, PoC v2 polish pass, MVP candidate, release preparation.
 - First prototype goal: A playable snake game with movement, food spawning, growth, collision detection, and scoring.
+- Current milestone: PoC v2, focused on persistence, UX flow, visual polish, and release readiness.
 - Risks: Scope creep, overdesign too early, inconsistent art direction, and underestimating polish work.
 - Dependencies: Python 3, Pygame, local development environment, and GitHub repo workflow.
 
@@ -70,3 +74,4 @@
 
 ## Change log
 - 2026-04-06: Initial draft created and aligned to Snake III.
+- 2026-04-06: Updated after PoC v1 release with clearer v2 priorities.

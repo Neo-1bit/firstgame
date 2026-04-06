@@ -9,7 +9,8 @@
 ## Player fantasy
 - What the player should feel: In control, relaxed, focused, and just a little proud when surviving tight turns.
 - What makes the experience satisfying: Clean movement, visible growth, rising tension, and the reward of beating a previous score.
-- Why players will come back: Short sessions, easy restarts, mastery through repetition, and future room for modifiers or challenge modes.
+- Current PoC status: The basic feel works, but the front-end flow and long-term replay hooks still need improvement.
+- Why players will come back: Short sessions, easy restarts, mastery through repetition, persistent best score, and future room for modifiers or challenge modes.
 
 ## Core gameplay loop
 1. Start a run and guide the mechanical snake around the board.
@@ -33,7 +34,7 @@
 - Enemy / obstacle systems: Walls by default, optional future hazards.
 - Economy / resources: Score as the main tracked resource.
 - Level or world systems: Single contained arena for MVP, with room for alternate boards later.
-- Save / progression systems: Optional local high score storage after MVP basics are stable.
+- Save / progression systems: PoC v1 keeps best score in-session only. PoC v2 should add safe local high score storage.
 
 ## Game modes
 - Main mode: Classic endless score attack.
@@ -48,7 +49,8 @@
 
 ## UX and controls
 - Input scheme: Arrow keys or WASD.
-- HUD / UI needs: Score display, high score area, start state, pause state, and game over message.
+- HUD / UI needs: Score display, high score area, title screen, pause state, and game over message.
+- Current PoC status: Gameplay HUD and game over state exist. Title and pause flow still need to be added.
 - Accessibility considerations: High-contrast mode later, readable fonts, clear game state prompts, and simple controls.
 
 ## Art and audio notes
@@ -75,7 +77,10 @@
 
 ## Prototype goals
 - What the first playable must prove: That the controls feel good, the loop is fun, and the game is stable enough to build on.
+- PoC v1 result: Core loop validated, local run path documented, and release published.
+- PoC v2 goal: Make the experience feel like a small complete game rather than just a functional prototype.
 - How success will be measured: Quick local setup, smooth play, no major bugs in the core loop, and positive team reaction to the feel.
 
 ## Change log
 - 2026-04-06: Initial Snake III design draft created.
+- 2026-04-06: Updated after PoC v1 to clarify UX and replay priorities for PoC v2.
