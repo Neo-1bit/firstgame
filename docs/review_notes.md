@@ -1,7 +1,7 @@
 # Review Notes
 
 ## Build summary
-This review build focuses on making Snake III feel like a small complete game rather than a raw prototype.
+This Beta-sprint baseline focuses on making Snake III feel like a small complete game rather than a raw prototype.
 
 ## What changed since v0.1.0
 - Added persistent local high score saving
@@ -24,14 +24,14 @@ This review build focuses on making Snake III feel like a small complete game ra
 - High score persistence across relaunch
 - Whether speed ramping feels good or too aggressive
 
-## Questions for review
-- Does the game now feel complete enough for a wider preview?
-- Is the current speed ramping enjoyable or too fast?
+## Questions for Beta feedback
+- Does the game now feel stable and complete enough for a Beta candidate?
+- Does the new slower speed curve feel right?
 - Does the HUD communicate state clearly enough?
 - Is more visual polish needed before the next release?
-- Should sound be the next priority, or packaging/release flow?
+- Should sound be part of Beta, or wait until after Beta?
 
-## Recommended next moves after review
-- Package a real review build on the target platform
-- Add sound effects if the game still feels too quiet
-- Decide whether to invest in more visual polish before release
+## Recommended next moves during Beta
+- Validate the packaged build on the target platform
+- Confirm the new slower speed curve with testers
+- Decide whether to invest in more visual polish before the Beta candidate

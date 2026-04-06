@@ -48,7 +48,7 @@ sudo apt install -y python3.12-venv python3-pip
 For more setup notes, see `docs/setup.md`.
 
 For packaging notes, see `docs/packaging.md`.
-For review guidance, see `docs/review_notes.md` and `docs/changelog.md`.
+For Beta guidance, see `docs/review_notes.md`, `docs/beta_checklist.md`, and `docs/changelog.md`.
 
 ## Save data
 - Best score is saved locally in `.local/high_score.json`
@@ -65,4 +65,4 @@ For review guidance, see `docs/review_notes.md` and `docs/changelog.md`.
 A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
 ## Status
-`v0.2.0` is out as the PoC v2 review build. The next sprint is aimed at Beta readiness: stable tester experience, packaged-build confidence, selective polish, and issue-driven quality improvements toward the next release.
+`v0.2.0` is out as the PoC v2 review build, and the project is now in its Beta sprint. The current focus is stable tester experience, packaged-build confidence, selective polish, and issue-driven quality improvements toward the next release.

@@ -15,12 +15,12 @@
 - [x] Best score persists across launches via `.local/high_score.json`
 
 ## Release readiness notes
-- Current build is suitable for the next internal review.
-- Pacing now uses gentle score-based speed ramping, which improves tension without introducing a large new system.
-- Highest-value remaining work before a wider release is packaging, optional audio, and any final art polish.
+- `v0.2.0` established a solid PoC v2 baseline for the Beta sprint.
+- Pacing now uses a slower Beta-tuned speed curve, pending tester confirmation.
+- Highest-value remaining work before a Beta candidate is packaged-build validation, optional audio, and any final art polish that clearly improves release quality.
 - No open blocking UX gaps remain in the current core loop.
 
 ## Follow-up candidates
 - Smoke test the packaged Linux build on the main target machine.
-- Add sound effects if presentation needs a stronger sense of feedback.
-- Use `docs/review_notes.md` and `docs/changelog.md` during the next internal review.
+- Confirm the slower Beta speed curve with testers.
+- Use `docs/review_notes.md`, `docs/beta_checklist.md`, and `docs/changelog.md` when preparing the Beta candidate.
