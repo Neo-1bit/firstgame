@@ -24,6 +24,8 @@ pyinstaller --noconfirm --onefile --windowed --name snakeiii src/main.py
 Output will be created in:
 - `dist/snakeiii`
 
+A Linux test build was successfully produced on 2026-04-06 in this repo environment.
+
 Build artifacts and temporary files:
 - `build/`
 - `dist/`

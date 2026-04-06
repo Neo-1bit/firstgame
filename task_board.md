@@ -6,7 +6,7 @@
 - Current focus is PoC v2 polish and usability work.
 
 ## In progress
-- [ ] Try a real packaged review build on the target platform
+- [ ] Smoke test the packaged Linux build on the main target machine
 - [ ] Decide whether visual effects polish is worth doing before release
 
 ## Ready next
@@ -46,6 +46,7 @@
 - [x] Prepare a lightweight packaging path
 - [x] Assemble review notes for the next internal playtest
 - [x] Prepare a small changelog for review
+- [x] Create a real packaged Linux review build
 
 ## Priorities
 ### High

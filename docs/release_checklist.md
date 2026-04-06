@@ -21,6 +21,6 @@
 - No open blocking UX gaps remain in the current core loop.
 
 ## Follow-up candidates
-- Create and test a real packaged review build on the target platform.
+- Smoke test the packaged Linux build on the main target machine.
 - Add sound effects if presentation needs a stronger sense of feedback.
 - Use `docs/review_notes.md` and `docs/changelog.md` during the next internal review.

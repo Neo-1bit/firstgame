@@ -1,4 +1,4 @@
-from src.snakeiii.game import main
+from snakeiii.game import main
 
 
 if __name__ == "__main__":
