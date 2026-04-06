@@ -1,19 +1,20 @@
 # Task Board
 
 ## Current status
-- The current review build is pushed to GitHub.
+- `v0.2.0` is released as the PoC v2 review build.
 - Core loop, score tracking, restart flow, title screen, pause flow, local saves, and packaging guidance are all in place.
-- Current focus is tester feedback, packaged-build verification, and issue-driven follow-up.
+- The new sprint goal is to move from PoC to Beta through stability, packaging confidence, and selective polish.
 
 ## In progress
 - [ ] Smoke test the packaged Linux build on the main target machine
-- [ ] Collect tester feedback on speed and feel
+- [ ] Define the Beta release checklist and acceptance bar
 
 ## Ready next
 - [ ] Triage and fix any new tester-reported bugs
 - [ ] Decide whether issue #7 needs speed retuning or difficulty options
-- [ ] Decide whether issue #4 should be part of the next release or deferred
-- [ ] Prepare a broader release candidate build if bug intake stays low
+- [ ] Decide whether issue #4 should be part of the Beta scope or deferred
+- [ ] Decide whether audio belongs in Beta or after Beta
+- [ ] Prepare a Beta release candidate build
 
 ## Backlog
 - [ ] Add sound effects and basic music
@@ -50,12 +51,12 @@
 
 ## Priorities
 ### High
-- Smoke test the packaged Linux build on the main target machine
-- Triage tester feedback quickly
-- Fix any release-facing bugs found during review
+- Stable packaged build on the main target machine
+- Fast triage of any release-facing bugs
+- Clear Beta acceptance checklist
 
 ### Medium
-- Sound effects
+- Sound effects if they materially improve Beta feel
 - Better visual identity and decorative polish
 - Cleaner packaging and release flow
 
@@ -66,10 +67,12 @@
 
 ## Suggested next sprint
 - [ ] Validate the packaged build on the main target machine
+- [ ] Create a Beta acceptance checklist
 - [ ] Triage every new tester issue within the same day
 - [ ] Decide on the next action for issue #7 (retune speed, add simpler options, or defer)
 - [ ] Decide on the next action for issue #4 (small visual pass or defer)
-- [ ] Prepare a broader release candidate build if no major bugs remain
+- [ ] Decide whether sound belongs in the Beta target
+- [ ] Prepare a Beta release candidate build if no major bugs remain
 
 ## Notes
 - Keep tasks small and implementation-ready.

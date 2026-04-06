@@ -15,4 +15,5 @@
 - Improved restart behavior so best-score progress is preserved more reliably
 
 ### Notes
-- Current build is intended for the next internal review pass.
+- `v0.2.0` has been released as the PoC v2 review build.
+- The next sprint is aimed at Beta readiness and release-candidate quality.

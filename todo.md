@@ -1,18 +1,19 @@
 # TODO
 
 ## Current focus
-- Smoke test the packaged Linux build on the main target machine
-- Triage new tester issues quickly as they arrive
-- Collect focused feedback on speed/feel and remaining visual polish
+- Move from PoC review build to Beta readiness
+- Validate the packaged build on the main target machine
+- Define the Beta acceptance bar before adding new scope
 
 ## Near-term follow-up
 1. Validate the packaged build on the main target machine
-2. Review new GitHub issues the same day they arrive
-3. Decide whether issue #7 needs speed retuning or difficulty options
-4. Decide whether issue #4 belongs in the next release or should wait
-5. Prepare a broader release candidate if bug reports stay light
+2. Create a Beta acceptance checklist
+3. Review new GitHub issues the same day they arrive
+4. Decide whether issue #7 needs speed retuning or difficulty options
+5. Decide whether issue #4 and optional audio belong in Beta scope
+6. Prepare a Beta release candidate if bug reports stay light
 
 ## Notes
-- The repo is pushed and ready for broader testing.
-- Avoid adding new feature scope until tester feedback lands.
-- Prefer issue-driven fixes and small polish updates from here.
+- `v0.2.0` is released and becomes the Beta sprint baseline.
+- Avoid adding broad new feature scope unless it clearly improves Beta readiness.
+- Prefer issue-driven fixes, packaging confidence, and a few high-value polish wins.

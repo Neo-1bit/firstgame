@@ -9,7 +9,7 @@
 ## Vision and success
 - Long term vision: Turn a simple snake game into a polished little arcade experience with charm, replayability, and room for future feature expansion.
 - What success looks like: Players can download and run the game easily, understand it immediately, and want to replay for a better score.
-- Current status: PoC v2 review build is now pushed, with persistent highscores, title screen, pause support, HUD polish, speed ramping, packaging notes, and review docs in place.
+- Current status: `v0.2.0` is released as the PoC v2 review build, with persistent highscores, title screen, pause support, HUD polish, speed ramping, packaging notes, and review docs in place. The project is now entering its Beta sprint.
 - Non-goals: Large open worlds, online multiplayer, complex economies, and heavy live-service features.
 
 ## Core gameplay or core experience
@@ -52,7 +52,7 @@
 ## Development plan
 - Milestones: Planning, PoC v1 release, PoC v2 polish pass, MVP candidate, release preparation.
 - First prototype goal: A playable snake game with movement, food spawning, growth, collision detection, and scoring.
-- Current milestone: Internal review and broader tester feedback after the PoC v2 push.
+- Current milestone: Beta sprint, focused on stability, packaged-build confidence, selective polish, and release-candidate readiness.
 - Risks: Scope creep, overdesign too early, inconsistent art direction, and underestimating polish work.
 - Dependencies: Python 3, Pygame, local development environment, and GitHub repo workflow.
 
@@ -76,3 +76,4 @@
 - 2026-04-06: Initial draft created and aligned to Snake III.
 - 2026-04-06: Updated after PoC v1 release with clearer v2 priorities.
 - 2026-04-06: Updated after PoC v2 review push to reflect current shipped features and review readiness.
+- 2026-04-06: Updated to kick off the Beta sprint after the `v0.2.0` release.

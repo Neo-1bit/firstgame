@@ -9,7 +9,7 @@
 ## Player fantasy
 - What the player should feel: In control, relaxed, focused, and just a little proud when surviving tight turns.
 - What makes the experience satisfying: Clean movement, visible growth, rising tension, and the reward of beating a previous score.
-- Current PoC status: The core loop now includes a title screen, pause state, persistent best score saving, HUD polish, and gentle speed ramping. The next feedback should focus on feel, presentation, and release value.
+- Current build status: The core loop now includes a title screen, pause state, persistent best score saving, HUD polish, and gentle speed ramping. Beta-phase feedback should focus on stability, feel, presentation, and release value.
 - Why players will come back: Short sessions, easy restarts, mastery through repetition, persistent best score, and future room for modifiers or challenge modes.
 
 ## Core gameplay loop
@@ -79,10 +79,11 @@
 - What the first playable must prove: That the controls feel good, the loop is fun, and the game is stable enough to build on.
 - PoC v1 result: Core loop validated, local run path documented, and release published.
 - PoC v2 goal: Make the experience feel like a small complete game rather than just a functional prototype.
-- Current review-build result: The project is now in a reviewer-friendly state with cleaner UX flow, packaged-build guidance, and smoke-tested core interactions.
+- Current Beta-sprint baseline: The project is now in a tester-friendly state with cleaner UX flow, packaged-build guidance, and smoke-tested core interactions.
 - How success will be measured: Quick local setup, smooth play, no major bugs in the core loop, and positive team reaction to the feel.
 
 ## Change log
 - 2026-04-06: Initial Snake III design draft created.
 - 2026-04-06: Updated after PoC v1 to clarify UX and replay priorities for PoC v2.
 - 2026-04-06: Updated after PoC v2 review push to reflect implemented systems and current review goals.
+- 2026-04-06: Updated for Beta sprint kickoff and release-candidate evaluation.
