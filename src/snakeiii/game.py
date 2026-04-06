@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import json
 import random
 from dataclasses import dataclass
+from pathlib import Path
 
 import pygame
 
@@ -38,6 +40,9 @@ KEY_TO_DIRECTION = {
     pygame.K_d: RIGHT,
 }
 
+SAVE_DIR = Path(__file__).resolve().parents[2] / ".local"
+SAVE_FILE = SAVE_DIR / "high_score.json"
+
 
 @dataclass
 class GameState:
@@ -48,6 +53,23 @@ class GameState:
     score: int
     best_score: int
     game_over: bool
+
+
+def load_best_score() -> int:
+    try:
+        data = json.loads(SAVE_FILE.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return 0
+    except (json.JSONDecodeError, OSError, TypeError):
+        return 0
+
+    value = data.get("best_score", 0)
+    return value if isinstance(value, int) and value >= 0 else 0
+
+
+def save_best_score(best_score: int) -> None:
+    SAVE_DIR.mkdir(parents=True, exist_ok=True)
+    SAVE_FILE.write_text(json.dumps({"best_score": best_score}, indent=2) + "\n", encoding="utf-8")
 
 
 def spawn_food(snake: list[tuple[int, int]]) -> tuple[int, int]:
@@ -99,14 +121,20 @@ def update(state: GameState) -> GameState:
 
     if hit_wall or hit_self:
         state.game_over = True
+        previous_best = state.best_score
         state.best_score = max(state.best_score, state.score)
+        if state.best_score > previous_best:
+            save_best_score(state.best_score)
         return state
 
     state.snake.insert(0, new_head)
 
     if new_head == state.food:
         state.score += 1
+        previous_best = state.best_score
         state.best_score = max(state.best_score, state.score)
+        if state.best_score > previous_best:
+            save_best_score(state.best_score)
         if len(state.snake) < GRID_WIDTH * GRID_HEIGHT:
             state.food = spawn_food(state.snake)
     else:
@@ -194,7 +222,7 @@ def main() -> int:
     title_font = pygame.font.SysFont("arial", 34, bold=True)
     body_font = pygame.font.SysFont("arial", 24)
 
-    state = reset(best_score=0)
+    state = reset(best_score=load_best_score())
     running = True
 
     while running:

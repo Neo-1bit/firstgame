@@ -47,8 +47,12 @@ sudo apt install -y python3.12-venv python3-pip
 
 For more setup notes, see `docs/setup.md`.
 
+## Save data
+- Best score is saved locally in `.local/high_score.json`
+- Save data is created automatically after setting a score
+
 ## MVP target
 A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
 ## Status
-Planning complete enough to begin implementation.
+Playable PoC v1 exists, and local persistent high score saving is now supported.
