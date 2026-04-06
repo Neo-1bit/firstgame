@@ -1,9 +1,18 @@
-# firstgame
+# Snake III
 
-A new game project by the team.
+A cosy steampunk snake game built in Python.
 
-## Purpose
-This repository contains the planning, design, and development work for `firstgame`.
+## Overview
+`Snake III` is a modern take on the classic snake formula. The goal is to build a small, polished desktop game with a friendly steampunk presentation, smooth controls, and enough charm to feel handcrafted rather than generic.
+
+## Vision
+The project starts with a clean, fun single-player snake game for Linux and Windows, then leaves room for later additions like power-ups, special boards, score challenges, and visual polish.
+
+## Current goals
+- Build a playable snake game with a GUI
+- Keep the code simple and maintainable
+- Ship an MVP quickly
+- Create a good foundation for future features
 
 ## Project documents
 - `project_goal.md` - project vision, scope, and success criteria
@@ -11,17 +20,19 @@ This repository contains the planning, design, and development work for `firstga
 - `task_board.md` - current tasks, priorities, and progress tracking
 - `tech_stack.md` - technical choices, tools, and architecture notes
 
-## Getting started
-1. Read `project_goal.md`
-2. Read `game_design.md`
-3. Review `task_board.md`
-4. Confirm the technical direction in `tech_stack.md`
+## Planned structure
+- `src/` - game source code
+- `assets/` - images, sounds, fonts, and art source files
+- `docs/` - extra documentation, references, and planning notes
 
-## Team workflow
-- Keep documents updated as decisions change
-- Record open questions before implementation
-- Break large work into clear tasks
-- Prefer small, reviewable commits
+## Getting started
+1. Review `project_goal.md`
+2. Review `game_design.md`
+3. Check `tech_stack.md`
+4. Use `task_board.md` to drive work
+
+## MVP target
+A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
 ## Status
-Planning setup in progress.
+Planning complete enough to begin implementation.

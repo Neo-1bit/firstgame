@@ -1,81 +1,81 @@
 # Game Design
 
 ## High concept
-- Game title:
-- Genre:
-- Elevator pitch:
-- Intended audience:
+- Game title: Snake III
+- Genre: Arcade, casual, retro-inspired desktop game.
+- Elevator pitch: A cosy steampunk reimagining of Snake, where players guide a mechanical serpent through a polished arcade experience.
+- Intended audience: Casual players, retro fans, and beginner gamers.
 
 ## Player fantasy
-- What the player should feel:
-- What makes the experience satisfying:
-- Why players will come back:
+- What the player should feel: In control, relaxed, focused, and just a little proud when surviving tight turns.
+- What makes the experience satisfying: Clean movement, visible growth, rising tension, and the reward of beating a previous score.
+- Why players will come back: Short sessions, easy restarts, mastery through repetition, and future room for modifiers or challenge modes.
 
 ## Core gameplay loop
-1. 
-2. 
-3. 
+1. Start a run and guide the mechanical snake around the board.
+2. Collect pickups to grow longer and increase score.
+3. Avoid walls and self-collision, then restart and try to beat the last run.
 
 ## Game pillars
-- Pillar 1:
-- Pillar 2:
-- Pillar 3:
+- Pillar 1: Responsive and readable gameplay.
+- Pillar 2: Small scope with polished presentation.
+- Pillar 3: A cosy steampunk identity that gives the project personality.
 
 ## Core mechanics
-- Movement:
-- Interaction:
-- Combat / challenge:
-- Progression:
-- Rewards:
+- Movement: Grid-based directional movement controlled by keyboard.
+- Interaction: Collect pickups, avoid obstacles, and navigate increasing space pressure.
+- Combat / challenge: No direct combat, challenge comes from positioning, speed, and self-management.
+- Progression: Score increases during a run, with future support for local high score tracking.
+- Rewards: Score growth, survival time, visual feedback, and completion satisfaction.
 
 ## Systems
-- Player systems:
-- Enemy / obstacle systems:
-- Economy / resources:
-- Level or world systems:
-- Save / progression systems:
+- Player systems: Input handling, movement queue, snake body growth, collision detection.
+- Enemy / obstacle systems: Walls by default, optional future hazards.
+- Economy / resources: Score as the main tracked resource.
+- Level or world systems: Single contained arena for MVP, with room for alternate boards later.
+- Save / progression systems: Optional local high score storage after MVP basics are stable.
 
 ## Game modes
-- Main mode:
-- Secondary modes:
-- Multiplayer / single-player notes:
+- Main mode: Classic endless score attack.
+- Secondary modes: Potential timed mode, obstacle mode, or challenge mode later.
+- Multiplayer / single-player notes: Single-player only for MVP.
 
 ## Level and content design
-- Setting:
-- Level structure:
-- Difficulty curve:
-- Content types:
+- Setting: A brass-and-copper mechanical playfield with a clean readable grid.
+- Level structure: One compact arena designed for quick sessions.
+- Difficulty curve: Starts calm, becomes tenser as the snake grows and optional speed increases.
+- Content types: Pickups, UI states, menus, and possible later hazards.
 
 ## UX and controls
-- Input scheme:
-- HUD / UI needs:
-- Accessibility considerations:
+- Input scheme: Arrow keys or WASD.
+- HUD / UI needs: Score display, high score area, start state, pause state, and game over message.
+- Accessibility considerations: High-contrast mode later, readable fonts, clear game state prompts, and simple controls.
 
 ## Art and audio notes
-- Art direction:
-- Animation needs:
-- Music direction:
-- Sound effect direction:
+- Art direction: Soft steampunk visuals with readable shapes, warm metal colors, and subtle decorative details.
+- Animation needs: Snake movement, pickup feedback, simple transitions, and a satisfying game over state.
+- Music direction: Light looping background music with a calm arcade feel.
+- Sound effect direction: Mechanical ticks, soft collection sounds, and gentle failure feedback.
 
 ## Narrative
-- Story premise:
-- Worldbuilding notes:
-- Characters:
-- Dialogue needs:
+- Story premise: A clockwork serpent moves through a tiny mechanical world collecting energy cores.
+- Worldbuilding notes: The setting should feel playful and compact, more like a crafted toybox than a deep lore universe.
+- Characters: The snake is the main character through motion and style.
+- Dialogue needs: None required for MVP.
 
 ## Monetization and retention
-- Monetization approach:
-- Replayability hooks:
-- Progression hooks:
+- Monetization approach: None for MVP.
+- Replayability hooks: Score chasing, better control mastery, and future modifiers.
+- Progression hooks: High score improvement and optional unlockable cosmetic touches later.
 
 ## Risks and unknowns
-- Risk 1:
-- Risk 2:
-- Risk 3:
+- Risk 1: Overcomplicating the first version instead of shipping a strong classic core.
+- Risk 2: Making the art direction too ambitious for a small initial release.
+- Risk 3: Adding systems before controls and feel are solid.
 
 ## Prototype goals
-- What the first playable must prove:
-- How success will be measured:
+- What the first playable must prove: That the controls feel good, the loop is fun, and the game is stable enough to build on.
+- How success will be measured: Quick local setup, smooth play, no major bugs in the core loop, and positive team reaction to the feel.
 
 ## Change log
-- YYYY-MM-DD: Initial draft created.
+- 2026-04-06: Initial Snake III design draft created.
