@@ -7,13 +7,13 @@
 
 ## In progress
 - [ ] Smoke test the packaged Linux build on the main target machine
-- [ ] Define the Beta release checklist and acceptance bar
+- [ ] Validate the new slower speed curve with testers
 
 ## Ready next
 - [ ] Triage and fix any new tester-reported bugs
-- [ ] Decide whether issue #7 needs speed retuning or difficulty options
 - [ ] Decide whether issue #4 should be part of the Beta scope or deferred
 - [ ] Decide whether audio belongs in Beta or after Beta
+- [ ] Prepare release notes for the Beta candidate
 - [ ] Prepare a Beta release candidate build
 
 ## Backlog
@@ -48,6 +48,7 @@
 - [x] Assemble review notes for the next internal playtest
 - [x] Prepare a small changelog for review
 - [x] Create a real packaged Linux review build
+- [x] Define the Beta release checklist and acceptance bar
 
 ## Priorities
 ### High
@@ -67,12 +68,11 @@
 
 ## Suggested next sprint
 - [ ] Validate the packaged build on the main target machine
-- [ ] Create a Beta acceptance checklist
+- [ ] Confirm the new slower speed curve with testers
 - [ ] Triage every new tester issue within the same day
-- [ ] Decide on the next action for issue #7 (retune speed, add simpler options, or defer)
 - [ ] Decide on the next action for issue #4 (small visual pass or defer)
 - [ ] Decide whether sound belongs in the Beta target
-- [ ] Prepare a Beta release candidate build if no major bugs remain
+- [ ] Prepare release notes and a Beta release candidate if no major bugs remain
 
 ## Notes
 - Keep tasks small and implementation-ready.
