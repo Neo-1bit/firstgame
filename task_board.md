@@ -6,14 +6,14 @@
 - Current focus is PoC v2 polish and usability work.
 
 ## In progress
-- [ ] Tune game feel, pacing, and presentation
-- [ ] Decide whether speed ramping belongs before the next release
+- [ ] Prepare a lightweight packaging path
+- [ ] Assemble review notes for the next internal playtest
 
 ## Ready next
-- [ ] Review board size, speed, and pacing feel
-- [ ] Prepare a lightweight packaging path
 - [ ] Add optional audio feedback
-- [ ] Assemble review notes for the next internal playtest
+- [ ] Prepare a small changelog for review
+- [ ] Decide whether visual effects polish is worth doing before release
+- [ ] Explore simple packaging for Linux and Windows
 
 ## Backlog
 - [ ] Decide on speed ramping for PoC v2 or later
@@ -42,6 +42,8 @@
 - [x] Add pause and resume controls
 - [x] Complete a release-ready smoke test pass
 - [x] Improve restart flow and edge-case handling
+- [x] Review movement speed and pacing
+- [x] Add gentle score-based speed ramping
 
 ## Priorities
 ### High

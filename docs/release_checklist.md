@@ -16,7 +16,8 @@
 
 ## Release readiness notes
 - Current build is suitable for the next internal review.
-- Highest-value remaining work before a wider release is feel tuning, packaging, and optional audio.
+- Pacing now uses gentle score-based speed ramping, which improves tension without introducing a large new system.
+- Highest-value remaining work before a wider release is packaging, optional audio, and any final art polish.
 - No open blocking UX gaps remain in the current core loop.
 
 ## Follow-up candidates

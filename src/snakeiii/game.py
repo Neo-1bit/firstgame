@@ -13,7 +13,8 @@ GRID_HEIGHT = 18
 HUD_HEIGHT = 72
 WINDOW_WIDTH = GRID_WIDTH * CELL_SIZE
 WINDOW_HEIGHT = GRID_HEIGHT * CELL_SIZE + HUD_HEIGHT
-FPS = 11
+BASE_FPS = 11
+MAX_FPS = 16
 BACKGROUND = (23, 20, 18)
 PANEL = (42, 35, 28)
 GRID_LINE = (58, 48, 37)
@@ -114,6 +115,10 @@ def is_opposite(a: tuple[int, int], b: tuple[int, int]) -> bool:
     return a[0] == -b[0] and a[1] == -b[1]
 
 
+def current_speed(state: GameState) -> int:
+    return min(MAX_FPS, BASE_FPS + state.score // 4)
+
+
 def update(state: GameState) -> GameState:
     if state.game_over or not state.started or state.paused:
         return state
@@ -198,24 +203,30 @@ def draw_hud(screen: pygame.Surface, font: pygame.font.Font, small_font: pygame.
     if not state.started:
         status_label = "Idle"
         help_label = "Space starts, arrows or WASD can also launch, Esc quits"
+        speed_label = "Speed: standby"
     elif state.paused:
         status_label = "Paused"
         help_label = "P resumes, R restarts, Esc quits"
+        speed_label = f"Speed: {current_speed(state)}"
     elif state.game_over:
         status_label = "Game over"
         help_label = "R restarts the mechanism, Esc quits"
+        speed_label = f"Speed reached: {current_speed(state)}"
     else:
         status_label = "Running"
         help_label = "Arrows or WASD steer, P pauses, R restarts"
+        speed_label = f"Speed: {current_speed(state)}"
 
     status = small_font.render(f"Status: {status_label}", True, HUD_MUTED)
+    speed = small_font.render(speed_label, True, HUD_MUTED)
     help_text = small_font.render(help_label, True, STEAM)
 
     screen.blit(title, (16, 8))
     screen.blit(score, (16, 36))
     screen.blit(best, (132, 36))
-    screen.blit(status, (248, 14))
-    screen.blit(help_text, (248, 38))
+    screen.blit(status, (248, 10))
+    screen.blit(speed, (248, 28))
+    screen.blit(help_text, (248, 46))
 
 
 def draw_overlay(screen: pygame.Surface, title_font: pygame.font.Font, body_font: pygame.font.Font, state: GameState) -> None:
@@ -249,23 +260,27 @@ def draw_overlay(screen: pygame.Surface, title_font: pygame.font.Font, body_font
         title = title_font.render("Mechanism paused", True, BRASS)
         subtitle = body_font.render("Press P to resume the run", True, TEXT)
         score = body_font.render(f"Current score: {state.score}", True, STEAM)
+        speed = body_font.render(f"Current speed: {current_speed(state)}", True, ACCENT)
         restart = body_font.render("Press R for a fresh run", True, HUD_MUTED)
 
-        screen.blit(title, title.get_rect(center=(center_x, center_y - 28)))
-        screen.blit(score, score.get_rect(center=(center_x, center_y + 6)))
-        screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 36)))
-        screen.blit(restart, restart.get_rect(center=(center_x, center_y + 68)))
+        screen.blit(title, title.get_rect(center=(center_x, center_y - 40)))
+        screen.blit(score, score.get_rect(center=(center_x, center_y - 4)))
+        screen.blit(speed, speed.get_rect(center=(center_x, center_y + 26)))
+        screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 58)))
+        screen.blit(restart, restart.get_rect(center=(center_x, center_y + 90)))
         return
 
     title = title_font.render("Boiler pressure lost", True, GAME_OVER)
     subtitle = body_font.render("Press R to restart the mechanism", True, TEXT)
     score = body_font.render(f"Final score: {state.score}", True, STEAM)
     best = body_font.render(f"Best score: {state.best_score}", True, ACCENT)
+    speed = body_font.render(f"Top speed: {current_speed(state)}", True, HUD_MUTED)
 
-    screen.blit(title, title.get_rect(center=(center_x, center_y - 32)))
-    screen.blit(score, score.get_rect(center=(center_x, center_y + 2)))
-    screen.blit(best, best.get_rect(center=(center_x, center_y + 32)))
-    screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 64)))
+    screen.blit(title, title.get_rect(center=(center_x, center_y - 46)))
+    screen.blit(score, score.get_rect(center=(center_x, center_y - 10)))
+    screen.blit(best, best.get_rect(center=(center_x, center_y + 22)))
+    screen.blit(speed, speed.get_rect(center=(center_x, center_y + 54)))
+    screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 86)))
 
 
 def main() -> int:
@@ -308,7 +323,7 @@ def main() -> int:
         draw_snake(screen, state.snake)
         draw_overlay(screen, title_font, body_font, state)
         pygame.display.flip()
-        clock.tick(FPS)
+        clock.tick(current_speed(state))
 
     pygame.quit()
     return 0
