@@ -15,6 +15,9 @@ venv/
 env/
 ENV/
 
+# Local app data
+.local/
+
 # Testing and coverage
 .pytest_cache/
 .coverage
