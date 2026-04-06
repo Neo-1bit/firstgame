@@ -31,6 +31,22 @@ The project starts with a clean, fun single-player snake game for Linux and Wind
 3. Check `tech_stack.md`
 4. Use `task_board.md` to drive work
 
+## Installation and run
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m src.main
+```
+
+If `venv` is missing on Debian or Ubuntu, install it with:
+
+```bash
+sudo apt install -y python3.12-venv python3-pip
+```
+
+For more setup notes, see `docs/setup.md`.
+
 ## MVP target
 A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
