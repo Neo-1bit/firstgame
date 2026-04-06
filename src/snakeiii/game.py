@@ -54,6 +54,7 @@ class GameState:
     best_score: int
     game_over: bool
     started: bool
+    paused: bool
 
 
 def load_best_score() -> int:
@@ -100,6 +101,7 @@ def reset(best_score: int) -> GameState:
         best_score=best_score,
         game_over=False,
         started=False,
+        paused=False,
     )
 
 
@@ -108,7 +110,7 @@ def is_opposite(a: tuple[int, int], b: tuple[int, int]) -> bool:
 
 
 def update(state: GameState) -> GameState:
-    if state.game_over or not state.started:
+    if state.game_over or not state.started or state.paused:
         return state
 
     if not is_opposite(state.direction, state.next_direction):
@@ -187,10 +189,12 @@ def draw_hud(screen: pygame.Surface, font: pygame.font.Font, state: GameState) -
     title = font.render("Snake III", True, BRASS)
     score = font.render(f"Score: {state.score}", True, TEXT)
     best = font.render(f"Best: {state.best_score}", True, TEXT)
-    if state.started:
-        help_label = "Arrows / WASD to move, R to restart, Esc to quit"
-    else:
+    if not state.started:
         help_label = "Press Space to start, arrows / WASD to queue direction, Esc to quit"
+    elif state.paused:
+        help_label = "P to resume, R to restart, Esc to quit"
+    else:
+        help_label = "Arrows / WASD to move, P to pause, R to restart, Esc to quit"
     help_text = font.render(help_label, True, STEAM)
 
     screen.blit(title, (16, 10))
@@ -200,7 +204,7 @@ def draw_hud(screen: pygame.Surface, font: pygame.font.Font, state: GameState) -
 
 
 def draw_overlay(screen: pygame.Surface, title_font: pygame.font.Font, body_font: pygame.font.Font, state: GameState) -> None:
-    if not state.game_over and state.started:
+    if not state.game_over and state.started and not state.paused:
         return
 
     overlay = pygame.Surface((WINDOW_WIDTH, WINDOW_HEIGHT), pygame.SRCALPHA)
@@ -222,6 +226,16 @@ def draw_overlay(screen: pygame.Surface, title_font: pygame.font.Font, body_font
         screen.blit(prompt, prompt.get_rect(center=(center_x, center_y + 26)))
         screen.blit(controls, controls.get_rect(center=(center_x, center_y + 58)))
         screen.blit(best, best.get_rect(center=(center_x, center_y + 96)))
+        return
+
+    if state.paused:
+        title = title_font.render("Mechanism paused", True, BRASS)
+        subtitle = body_font.render("Press P to resume the run", True, TEXT)
+        score = body_font.render(f"Current score: {state.score}", True, STEAM)
+
+        screen.blit(title, title.get_rect(center=(center_x, center_y - 20)))
+        screen.blit(score, score.get_rect(center=(center_x, center_y + 12)))
+        screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 42)))
         return
 
     title = title_font.render("Boiler pressure lost", True, GAME_OVER)
@@ -254,9 +268,11 @@ def main() -> int:
                     running = False
                 elif event.key == pygame.K_r:
                     state = reset(best_score=state.best_score)
+                elif event.key == pygame.K_p and state.started and not state.game_over:
+                    state.paused = not state.paused
                 elif event.key == pygame.K_SPACE and not state.started:
                     state.started = True
-                elif event.key in KEY_TO_DIRECTION:
+                elif event.key in KEY_TO_DIRECTION and not state.paused:
                     state.next_direction = KEY_TO_DIRECTION[event.key]
                     if not state.started:
                         state.started = True

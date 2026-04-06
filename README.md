@@ -54,6 +54,7 @@ For more setup notes, see `docs/setup.md`.
 ## Controls
 - `Space` to start from the title screen
 - Arrow keys or `WASD` to move
+- `P` to pause or resume during a run
 - `R` to restart
 - `Esc` to quit
 
@@ -61,4 +62,4 @@ For more setup notes, see `docs/setup.md`.
 A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
 ## Status
-Playable PoC v1 exists, and PoC v2 now includes local persistent high score saving plus a proper title screen.
+Playable PoC v1 exists, and PoC v2 now includes local persistent high score saving, a proper title screen, and pause support.

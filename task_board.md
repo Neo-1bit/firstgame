@@ -6,15 +6,14 @@
 - Current focus is PoC v2 polish and usability work.
 
 ## In progress
-- [ ] Reconcile planning docs and task tracking with the shipped PoC v1 state
-- [ ] Define the exact PoC v2 scope and order of implementation
-
-## Ready next
-- [ ] Add persistent local high score saving
-- [ ] Add a proper title screen / start state
-- [ ] Add a pause state
 - [ ] Tune game feel, pacing, and presentation
 - [ ] Improve HUD clarity and restart messaging
+
+## Ready next
+- [ ] Add subtle start / pause / game-over presentation polish
+- [ ] Review board size, speed, and pacing feel
+- [ ] Improve restart flow and edge-case handling
+- [ ] Prepare a release-ready smoke test pass
 
 ## Backlog
 - [ ] Decide on speed ramping for PoC v2 or later
@@ -38,13 +37,15 @@
 - [x] Implement game over state and restart flow
 - [x] Ship playable PoC v1
 - [x] Add GitHub issue and PR templates
+- [x] Add persistent local high score saving
+- [x] Add a proper title screen / start state
+- [x] Add pause and resume controls
 
 ## Priorities
 ### High
-- Persistent high score saving
-- Title screen and cleaner start flow
-- Pause state
 - Feel tuning and small UX polish
+- Start / pause / restart flow polish
+- Release-ready smoke testing
 
 ### Medium
 - Sound effects
@@ -57,12 +58,11 @@
 - Extra visual flourishes
 
 ## Suggested next sprint
-- [ ] Implement local high score persistence on disk
-- [ ] Add title screen with start prompt
-- [ ] Add pause and resume controls
 - [ ] Refine HUD copy and layout
 - [ ] Review movement speed and pacing
-- [ ] Smoke test restart, quit, and edge cases
+- [ ] Add small visual feedback for title, pause, and game-over states
+- [ ] Smoke test restart, pause, quit, and edge cases
+- [ ] Prepare a short release checklist
 
 ## Notes
 - Keep tasks small and implementation-ready.
