@@ -75,6 +75,10 @@ def save_best_score(best_score: int) -> None:
     SAVE_FILE.write_text(json.dumps({"best_score": best_score}, indent=2) + "\n", encoding="utf-8")
 
 
+def current_best_score(state: GameState) -> int:
+    return max(state.best_score, state.score)
+
+
 def spawn_food(snake: list[tuple[int, int]]) -> tuple[int, int]:
     free_cells = [
         (x, y)
@@ -127,7 +131,7 @@ def update(state: GameState) -> GameState:
     if hit_wall or hit_self:
         state.game_over = True
         previous_best = state.best_score
-        state.best_score = max(state.best_score, state.score)
+        state.best_score = current_best_score(state)
         if state.best_score > previous_best:
             save_best_score(state.best_score)
         return state
@@ -137,7 +141,7 @@ def update(state: GameState) -> GameState:
     if new_head == state.food:
         state.score += 1
         previous_best = state.best_score
-        state.best_score = max(state.best_score, state.score)
+        state.best_score = current_best_score(state)
         if state.best_score > previous_best:
             save_best_score(state.best_score)
         if len(state.snake) < GRID_WIDTH * GRID_HEIGHT:
@@ -285,7 +289,7 @@ def main() -> int:
                 if event.key == pygame.K_ESCAPE:
                     running = False
                 elif event.key == pygame.K_r:
-                    state = reset(best_score=state.best_score)
+                    state = reset(best_score=current_best_score(state))
                 elif event.key == pygame.K_p and state.started and not state.game_over:
                     state.paused = not state.paused
                 elif event.key == pygame.K_SPACE and not state.started:

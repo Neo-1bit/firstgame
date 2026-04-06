@@ -7,13 +7,13 @@
 
 ## In progress
 - [ ] Tune game feel, pacing, and presentation
-- [ ] Prepare a release-ready smoke test pass
+- [ ] Decide whether speed ramping belongs before the next release
 
 ## Ready next
-- [ ] Add subtle start / pause / game-over presentation polish
 - [ ] Review board size, speed, and pacing feel
-- [ ] Improve restart flow and edge-case handling
-- [ ] Prepare a release-ready smoke test pass
+- [ ] Prepare a lightweight packaging path
+- [ ] Add optional audio feedback
+- [ ] Assemble review notes for the next internal playtest
 
 ## Backlog
 - [ ] Decide on speed ramping for PoC v2 or later
@@ -40,6 +40,8 @@
 - [x] Add persistent local high score saving
 - [x] Add a proper title screen / start state
 - [x] Add pause and resume controls
+- [x] Complete a release-ready smoke test pass
+- [x] Improve restart flow and edge-case handling
 
 ## Priorities
 ### High
