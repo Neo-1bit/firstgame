@@ -62,4 +62,4 @@ For more setup notes, see `docs/setup.md`.
 A playable desktop game where the player controls a snake, collects items, grows longer, avoids collisions, and can restart easily after game over.
 
 ## Status
-Playable PoC v1 exists, and PoC v2 now includes local persistent high score saving, a proper title screen, and pause support.
+Playable PoC v1 exists, and PoC v2 now includes local persistent high score saving, a proper title screen, pause support, and an improved in-game presentation pass.

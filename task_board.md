@@ -7,7 +7,7 @@
 
 ## In progress
 - [ ] Tune game feel, pacing, and presentation
-- [ ] Improve HUD clarity and restart messaging
+- [ ] Prepare a release-ready smoke test pass
 
 ## Ready next
 - [ ] Add subtle start / pause / game-over presentation polish
@@ -58,11 +58,10 @@
 - Extra visual flourishes
 
 ## Suggested next sprint
-- [ ] Refine HUD copy and layout
 - [ ] Review movement speed and pacing
-- [ ] Add small visual feedback for title, pause, and game-over states
 - [ ] Smoke test restart, pause, quit, and edge cases
 - [ ] Prepare a short release checklist
+- [ ] Decide whether speed ramping belongs before the next release
 
 ## Notes
 - Keep tasks small and implementation-ready.

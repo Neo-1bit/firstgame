@@ -13,7 +13,7 @@ GRID_HEIGHT = 18
 HUD_HEIGHT = 72
 WINDOW_WIDTH = GRID_WIDTH * CELL_SIZE
 WINDOW_HEIGHT = GRID_HEIGHT * CELL_SIZE + HUD_HEIGHT
-FPS = 10
+FPS = 11
 BACKGROUND = (23, 20, 18)
 PANEL = (42, 35, 28)
 GRID_LINE = (58, 48, 37)
@@ -23,6 +23,7 @@ STEAM = (214, 205, 184)
 ACCENT = (116, 171, 120)
 TEXT = (236, 229, 214)
 GAME_OVER = (160, 60, 50)
+HUD_MUTED = (170, 157, 138)
 
 UP = (0, -1)
 DOWN = (0, 1)
@@ -181,26 +182,36 @@ def draw_food(screen: pygame.Surface, food: tuple[int, int]) -> None:
     pygame.draw.line(screen, ACCENT, (center_x, center_y - 9), (center_x + 4, center_y - 14), 2)
 
 
-def draw_hud(screen: pygame.Surface, font: pygame.font.Font, state: GameState) -> None:
+def draw_hud(screen: pygame.Surface, font: pygame.font.Font, small_font: pygame.font.Font, state: GameState) -> None:
     panel = pygame.Rect(0, 0, WINDOW_WIDTH, HUD_HEIGHT)
     pygame.draw.rect(screen, PANEL, panel)
     pygame.draw.line(screen, BRASS, (0, HUD_HEIGHT - 1), (WINDOW_WIDTH, HUD_HEIGHT - 1), 2)
 
     title = font.render("Snake III", True, BRASS)
-    score = font.render(f"Score: {state.score}", True, TEXT)
-    best = font.render(f"Best: {state.best_score}", True, TEXT)
-    if not state.started:
-        help_label = "Press Space to start, arrows / WASD to queue direction, Esc to quit"
-    elif state.paused:
-        help_label = "P to resume, R to restart, Esc to quit"
-    else:
-        help_label = "Arrows / WASD to move, P to pause, R to restart, Esc to quit"
-    help_text = font.render(help_label, True, STEAM)
+    score = font.render(f"Score {state.score}", True, TEXT)
+    best = font.render(f"Best {state.best_score}", True, TEXT)
 
-    screen.blit(title, (16, 10))
-    screen.blit(score, (16, 38))
-    screen.blit(best, (160, 38))
-    screen.blit(help_text, (320, 38))
+    if not state.started:
+        status_label = "Idle"
+        help_label = "Space starts, arrows or WASD can also launch, Esc quits"
+    elif state.paused:
+        status_label = "Paused"
+        help_label = "P resumes, R restarts, Esc quits"
+    elif state.game_over:
+        status_label = "Game over"
+        help_label = "R restarts the mechanism, Esc quits"
+    else:
+        status_label = "Running"
+        help_label = "Arrows or WASD steer, P pauses, R restarts"
+
+    status = small_font.render(f"Status: {status_label}", True, HUD_MUTED)
+    help_text = small_font.render(help_label, True, STEAM)
+
+    screen.blit(title, (16, 8))
+    screen.blit(score, (16, 36))
+    screen.blit(best, (132, 36))
+    screen.blit(status, (248, 14))
+    screen.blit(help_text, (248, 38))
 
 
 def draw_overlay(screen: pygame.Surface, title_font: pygame.font.Font, body_font: pygame.font.Font, state: GameState) -> None:
@@ -219,32 +230,38 @@ def draw_overlay(screen: pygame.Surface, title_font: pygame.font.Font, body_font
         subtitle = body_font.render("A cosy clockwork arcade run", True, STEAM)
         prompt = body_font.render("Press Space to start the mechanism", True, TEXT)
         controls = body_font.render("Move with arrows or WASD", True, TEXT)
+        alt_start = body_font.render("You can steer immediately to launch", True, HUD_MUTED)
         best = body_font.render(f"Stored best score: {state.best_score}", True, ACCENT)
 
-        screen.blit(title, title.get_rect(center=(center_x, center_y - 54)))
-        screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y - 18)))
-        screen.blit(prompt, prompt.get_rect(center=(center_x, center_y + 26)))
-        screen.blit(controls, controls.get_rect(center=(center_x, center_y + 58)))
-        screen.blit(best, best.get_rect(center=(center_x, center_y + 96)))
+        screen.blit(title, title.get_rect(center=(center_x, center_y - 64)))
+        screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y - 28)))
+        screen.blit(prompt, prompt.get_rect(center=(center_x, center_y + 18)))
+        screen.blit(controls, controls.get_rect(center=(center_x, center_y + 50)))
+        screen.blit(alt_start, alt_start.get_rect(center=(center_x, center_y + 78)))
+        screen.blit(best, best.get_rect(center=(center_x, center_y + 112)))
         return
 
     if state.paused:
         title = title_font.render("Mechanism paused", True, BRASS)
         subtitle = body_font.render("Press P to resume the run", True, TEXT)
         score = body_font.render(f"Current score: {state.score}", True, STEAM)
+        restart = body_font.render("Press R for a fresh run", True, HUD_MUTED)
 
-        screen.blit(title, title.get_rect(center=(center_x, center_y - 20)))
-        screen.blit(score, score.get_rect(center=(center_x, center_y + 12)))
-        screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 42)))
+        screen.blit(title, title.get_rect(center=(center_x, center_y - 28)))
+        screen.blit(score, score.get_rect(center=(center_x, center_y + 6)))
+        screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 36)))
+        screen.blit(restart, restart.get_rect(center=(center_x, center_y + 68)))
         return
 
     title = title_font.render("Boiler pressure lost", True, GAME_OVER)
     subtitle = body_font.render("Press R to restart the mechanism", True, TEXT)
     score = body_font.render(f"Final score: {state.score}", True, STEAM)
+    best = body_font.render(f"Best score: {state.best_score}", True, ACCENT)
 
-    screen.blit(title, title.get_rect(center=(center_x, center_y - 20)))
-    screen.blit(score, score.get_rect(center=(center_x, center_y + 12)))
-    screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 42)))
+    screen.blit(title, title.get_rect(center=(center_x, center_y - 32)))
+    screen.blit(score, score.get_rect(center=(center_x, center_y + 2)))
+    screen.blit(best, best.get_rect(center=(center_x, center_y + 32)))
+    screen.blit(subtitle, subtitle.get_rect(center=(center_x, center_y + 64)))
 
 
 def main() -> int:
@@ -253,6 +270,7 @@ def main() -> int:
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
     clock = pygame.time.Clock()
     hud_font = pygame.font.SysFont("arial", 22)
+    hud_small_font = pygame.font.SysFont("arial", 18)
     title_font = pygame.font.SysFont("arial", 34, bold=True)
     body_font = pygame.font.SysFont("arial", 24)
 
@@ -280,7 +298,7 @@ def main() -> int:
         state = update(state)
 
         screen.fill(BACKGROUND)
-        draw_hud(screen, hud_font, state)
+        draw_hud(screen, hud_font, hud_small_font, state)
         draw_grid(screen)
         draw_food(screen, state.food)
         draw_snake(screen, state.snake)
