@@ -12,7 +12,6 @@
 ## Ready next
 - [ ] Triage and fix any new tester-reported bugs
 - [ ] Decide whether issue #4 should be part of the Beta scope or deferred
-- [ ] Decide whether audio belongs in Beta or after Beta
 - [ ] Prepare release notes for the Beta candidate
 - [ ] Prepare a Beta release candidate build
 
@@ -57,9 +56,9 @@
 - Clear Beta acceptance checklist
 
 ### Medium
-- Sound effects if they materially improve Beta feel
 - Better visual identity and decorative polish
 - Cleaner packaging and release flow
+- Optional sound effects if they can be added with very low risk
 
 ### Low
 - Alternate board themes
@@ -71,7 +70,6 @@
 - [ ] Confirm the new slower speed curve with testers
 - [ ] Triage every new tester issue within the same day
 - [ ] Decide on the next action for issue #4 (small visual pass or defer)
-- [ ] Decide whether sound belongs in the Beta target
 - [ ] Prepare release notes and a Beta release candidate if no major bugs remain
 
 ## Notes

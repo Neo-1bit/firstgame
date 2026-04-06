@@ -31,5 +31,9 @@ A build is Beta-ready when all of the following are true:
 - Packaged Linux build still needs real target-machine smoke testing
 - Issue #7 speed feedback may still need one more confirmation pass after the latest tuning
 
+## Scope decision notes
+- Audio is optional for Beta, not a Beta blocker.
+- Only include audio before Beta if it can be added with very low risk and clearly improves release quality.
+
 ## Exit condition
 When the checklist above is satisfied, prepare a Beta release candidate and tag it rather than continuing indefinite polish.
