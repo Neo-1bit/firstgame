@@ -2,13 +2,15 @@
 
 ## Current focus
 - Smoke test the packaged Linux build on the main target machine
-- Collect tester feedback from the newly pushed review build
-- Decide whether visual polish or audio is the next best improvement
+- Triage new tester issues quickly as they arrive
+- Collect focused feedback on speed/feel and remaining visual polish
 
 ## Near-term follow-up
 1. Validate the packaged build on the main target machine
-2. Watch for tester issues and triage them quickly
-3. Decide whether to prepare a broader release candidate or do one more polish pass
+2. Review new GitHub issues the same day they arrive
+3. Decide whether issue #7 needs speed retuning or difficulty options
+4. Decide whether issue #4 belongs in the next release or should wait
+5. Prepare a broader release candidate if bug reports stay light
 
 ## Notes
 - The repo is pushed and ready for broader testing.

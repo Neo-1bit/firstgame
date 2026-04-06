@@ -7,13 +7,13 @@
 
 ## In progress
 - [ ] Smoke test the packaged Linux build on the main target machine
-- [ ] Decide whether visual effects polish is worth doing before release
+- [ ] Collect tester feedback on speed and feel
 
 ## Ready next
-- [ ] Add optional audio feedback
-- [ ] Draft release notes for the next review drop
-- [ ] Prepare a broader release candidate build
-- [ ] Decide whether any final art pass is still worth the time
+- [ ] Triage and fix any new tester-reported bugs
+- [ ] Decide whether issue #7 needs speed retuning or difficulty options
+- [ ] Decide whether issue #4 should be part of the next release or deferred
+- [ ] Prepare a broader release candidate build if bug intake stays low
 
 ## Backlog
 - [ ] Add sound effects and basic music
@@ -65,10 +65,11 @@
 - Extra visual flourishes
 
 ## Suggested next sprint
-- [ ] Try a packaged build on the main target platform
-- [ ] Collect playtest feedback on pacing and clarity
-- [ ] Decide whether sound or visual polish is the next best return
-- [ ] Prepare a broader review or release candidate build
+- [ ] Validate the packaged build on the main target machine
+- [ ] Triage every new tester issue within the same day
+- [ ] Decide on the next action for issue #7 (retune speed, add simpler options, or defer)
+- [ ] Decide on the next action for issue #4 (small visual pass or defer)
+- [ ] Prepare a broader release candidate build if no major bugs remain
 
 ## Notes
 - Keep tasks small and implementation-ready.
